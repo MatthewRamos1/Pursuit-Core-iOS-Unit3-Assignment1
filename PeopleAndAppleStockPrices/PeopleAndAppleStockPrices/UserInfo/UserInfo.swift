@@ -9,10 +9,10 @@
 import Foundation
 
 struct UserInfo: Decodable {
-    let results: [RandomUser]
+    let results: [User]
 }
 
-struct RandomUser: Decodable {
+struct User: Decodable {
     let name: Name
     let email: String
     let location: Location
@@ -32,8 +32,8 @@ struct Location: Decodable {
 
 
 extension UserInfo {
-    static func getUsers(data: Data) -> [RandomUser] {
-        var randomUsers = [RandomUser]()
+    static func getUsers(data: Data) -> [User] {
+        var randomUsers = [User]()
         do {
             let randomUserData = try JSONDecoder().decode(UserInfo.self, from: data)
             randomUsers = randomUserData.results
