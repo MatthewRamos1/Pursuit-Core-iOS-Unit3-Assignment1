@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0C96A267239C086700C1A6B1 /* Bundle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C96A266239C086600C1A6B1 /* Bundle+Extensions.swift */; };
+		0C96A269239D985F00C1A6B1 /* userinfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 0C96A268239D985F00C1A6B1 /* userinfo.json */; };
+		0C96A26B239D989100C1A6B1 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C96A26A239D989100C1A6B1 /* UserInfo.swift */; };
 		577E5BEC21BA8BA10083EB97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577E5BEB21BA8BA10083EB97 /* AppDelegate.swift */; };
 		577E5BEE21BA8BA10083EB97 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577E5BED21BA8BA10083EB97 /* ViewController.swift */; };
 		577E5BF121BA8BA10083EB97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 577E5BEF21BA8BA10083EB97 /* Main.storyboard */; };
@@ -19,6 +21,8 @@
 
 /* Begin PBXFileReference section */
 		0C96A266239C086600C1A6B1 /* Bundle+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extensions.swift"; sourceTree = "<group>"; };
+		0C96A268239D985F00C1A6B1 /* userinfo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = userinfo.json; path = PeopleAndAppleStockPrices/userinfo.json; sourceTree = "<group>"; };
+		0C96A26A239D989100C1A6B1 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		577E5BE821BA8BA10083EB97 /* PeopleAndAppleStockPrices.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeopleAndAppleStockPrices.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		577E5BEB21BA8BA10083EB97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		577E5BED21BA8BA10083EB97 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,9 +45,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C96A26C239D9A6400C1A6B1 /* UserInfo */ = {
+			isa = PBXGroup;
+			children = (
+				0C96A26A239D989100C1A6B1 /* UserInfo.swift */,
+			);
+			path = UserInfo;
+			sourceTree = "<group>";
+		};
 		577E5BDF21BA8BA10083EB97 = {
 			isa = PBXGroup;
 			children = (
+				0C96A268239D985F00C1A6B1 /* userinfo.json */,
 				577E5BEA21BA8BA10083EB97 /* PeopleAndAppleStockPrices */,
 				577E5BE921BA8BA10083EB97 /* Products */,
 			);
@@ -63,6 +76,7 @@
 				577E5BED21BA8BA10083EB97 /* ViewController.swift */,
 				577E5BEF21BA8BA10083EB97 /* Main.storyboard */,
 				0C96A266239C086600C1A6B1 /* Bundle+Extensions.swift */,
+				0C96A26C239D9A6400C1A6B1 /* UserInfo */,
 				577E5BFD21BA8BE20083EB97 /* Supporting Files */,
 				577E5BF721BA8BA20083EB97 /* Info.plist */,
 			);
@@ -147,6 +161,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C96A269239D985F00C1A6B1 /* userinfo.json in Resources */,
 				577E5BFF21BA8C3B0083EB97 /* userinfo.json in Resources */,
 				577E5C0121BA8C5C0083EB97 /* applstockinfo.json in Resources */,
 				577E5BF621BA8BA20083EB97 /* LaunchScreen.storyboard in Resources */,
@@ -162,6 +177,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C96A26B239D989100C1A6B1 /* UserInfo.swift in Sources */,
 				0C96A267239C086700C1A6B1 /* Bundle+Extensions.swift in Sources */,
 				577E5BEE21BA8BA10083EB97 /* ViewController.swift in Sources */,
 				577E5BEC21BA8BA10083EB97 /* AppDelegate.swift in Sources */,

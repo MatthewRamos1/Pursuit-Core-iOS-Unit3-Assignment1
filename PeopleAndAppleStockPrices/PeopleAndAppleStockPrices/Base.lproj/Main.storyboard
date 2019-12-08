@@ -17,26 +17,49 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xQX-9j-C1Q">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="144" width="414" height="669"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="S1N-qd-rC0">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="vMh-BN-bE3" detailTextLabel="V1G-Mc-Luf" style="IBUITableViewCellStyleSubtitle" id="S1N-qd-rC0">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="S1N-qd-rC0" id="pHf-Q1-141">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="55.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vMh-BN-bE3">
+                                                    <rect key="frame" x="20" y="10" width="33.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="V1G-Mc-Luf">
+                                                    <rect key="frame" x="20" y="31.5" width="44" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Hy3-kN-bo0">
+                                <rect key="frame" x="0.0" y="88" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="xQX-9j-C1Q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Lgh-fx-nUZ"/>
-                            <constraint firstItem="xQX-9j-C1Q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="SEG-5Z-JDN"/>
-                            <constraint firstItem="xQX-9j-C1Q" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ndI-tr-Pl9"/>
-                            <constraint firstItem="xQX-9j-C1Q" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="u6S-jN-0QR"/>
+                            <constraint firstItem="Hy3-kN-bo0" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="5oz-eq-1O8"/>
+                            <constraint firstItem="xQX-9j-C1Q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7Ed-91-RrW"/>
+                            <constraint firstItem="xQX-9j-C1Q" firstAttribute="top" secondItem="Hy3-kN-bo0" secondAttribute="bottom" id="U5E-dh-p59"/>
+                            <constraint firstItem="Hy3-kN-bo0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="WbI-fa-tCb"/>
+                            <constraint firstItem="xQX-9j-C1Q" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="YML-pE-XbI"/>
+                            <constraint firstItem="Hy3-kN-bo0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fcf-YL-2yd"/>
+                            <constraint firstItem="xQX-9j-C1Q" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="yej-Oh-ioC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
