@@ -78,7 +78,7 @@
         <!--Stocks-->
         <scene sceneID="cl5-BK-HoG">
             <objects>
-                <viewController id="3WJ-mZ-uLh" sceneMemberID="viewController">
+                <viewController id="3WJ-mZ-uLh" customClass="StockInfoListViewController" customModule="PeopleAndAppleStockPricesV2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ur8-eA-RjS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -127,6 +127,9 @@
                         <viewLayoutGuide key="safeArea" id="HyP-Ej-fmZ"/>
                     </view>
                     <navigationItem key="navigationItem" title="Stocks" id="4hG-cU-DD5"/>
+                    <connections>
+                        <outlet property="tableView" destination="RVA-xZ-2NF" id="aET-wg-Xii"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zK0-gO-taa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -261,6 +264,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="c6k-eS-UzA" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oHH-zn-8M6">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
