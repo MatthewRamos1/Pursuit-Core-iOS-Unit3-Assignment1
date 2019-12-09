@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		0CB02871239EE35800E36E41 /* userinfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 0CB02870239EE35800E36E41 /* userinfo.json */; };
 		0CB02873239EE38D00E36E41 /* Bundle + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB02872239EE38D00E36E41 /* Bundle + Extensions.swift */; };
+		0CB02878239EEF1A00E36E41 /* appleStockInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 0CB02877239EEF1A00E36E41 /* appleStockInfo.json */; };
+		0CB0287A239EEFCF00E36E41 /* StockInfoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB02879239EEFCF00E36E41 /* StockInfoListViewController.swift */; };
+		0CB0287C239EEFEE00E36E41 /* StockInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB0287B239EEFEE00E36E41 /* StockInfo.swift */; };
+		0CB0287E239EF00800E36E41 /* StockInfoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB0287D239EF00800E36E41 /* StockInfoDetailViewController.swift */; };
 		0CFA4E3F239D9E3500FE1C71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFA4E3E239D9E3500FE1C71 /* AppDelegate.swift */; };
 		0CFA4E41239D9E3500FE1C71 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFA4E40239D9E3500FE1C71 /* SceneDelegate.swift */; };
 		0CFA4E46239D9E3500FE1C71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CFA4E44239D9E3500FE1C71 /* Main.storyboard */; };
@@ -22,6 +26,10 @@
 /* Begin PBXFileReference section */
 		0CB02870239EE35800E36E41 /* userinfo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = userinfo.json; sourceTree = "<group>"; };
 		0CB02872239EE38D00E36E41 /* Bundle + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle + Extensions.swift"; sourceTree = "<group>"; };
+		0CB02877239EEF1A00E36E41 /* appleStockInfo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = appleStockInfo.json; sourceTree = "<group>"; };
+		0CB02879239EEFCF00E36E41 /* StockInfoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockInfoListViewController.swift; sourceTree = "<group>"; };
+		0CB0287B239EEFEE00E36E41 /* StockInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockInfo.swift; sourceTree = "<group>"; };
+		0CB0287D239EF00800E36E41 /* StockInfoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockInfoDetailViewController.swift; sourceTree = "<group>"; };
 		0CFA4E3B239D9E3500FE1C71 /* PeopleAndAppleStockPricesV2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeopleAndAppleStockPricesV2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CFA4E3E239D9E3500FE1C71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0CFA4E40239D9E3500FE1C71 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,12 +53,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0CB02874239EEE6200E36E41 /* StockInfo */ = {
+			isa = PBXGroup;
+			children = (
+				0CB02879239EEFCF00E36E41 /* StockInfoListViewController.swift */,
+				0CB0287B239EEFEE00E36E41 /* StockInfo.swift */,
+				0CB0287D239EF00800E36E41 /* StockInfoDetailViewController.swift */,
+			);
+			path = StockInfo;
+			sourceTree = "<group>";
+		};
 		0CFA4E32239D9E3500FE1C71 = {
 			isa = PBXGroup;
 			children = (
+				0CB02877239EEF1A00E36E41 /* appleStockInfo.json */,
 				0CB02870239EE35800E36E41 /* userinfo.json */,
 				0CFA4E3D239D9E3500FE1C71 /* PeopleAndAppleStockPricesV2 */,
 				0CFA4E5C239DA2B900FE1C71 /* UserInfo */,
+				0CB02874239EEE6200E36E41 /* StockInfo */,
 				0CFA4E3C239D9E3500FE1C71 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -149,6 +169,7 @@
 				0CFA4E4B239D9E3800FE1C71 /* LaunchScreen.storyboard in Resources */,
 				0CFA4E48239D9E3800FE1C71 /* Assets.xcassets in Resources */,
 				0CFA4E46239D9E3500FE1C71 /* Main.storyboard in Resources */,
+				0CB02878239EEF1A00E36E41 /* appleStockInfo.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,10 +182,13 @@
 			files = (
 				0CFA4E5E239DA35B00FE1C71 /* UserInfoDetailViewController.swift in Sources */,
 				0CFA4E5B239D9F2C00FE1C71 /* ViewController.swift in Sources */,
+				0CB0287C239EEFEE00E36E41 /* StockInfo.swift in Sources */,
 				0CFA4E3F239D9E3500FE1C71 /* AppDelegate.swift in Sources */,
+				0CB0287E239EF00800E36E41 /* StockInfoDetailViewController.swift in Sources */,
 				0CFA4E41239D9E3500FE1C71 /* SceneDelegate.swift in Sources */,
 				0CFA4E57239D9E9000FE1C71 /* UserInfo.swift in Sources */,
 				0CB02873239EE38D00E36E41 /* Bundle + Extensions.swift in Sources */,
+				0CB0287A239EEFCF00E36E41 /* StockInfoListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
