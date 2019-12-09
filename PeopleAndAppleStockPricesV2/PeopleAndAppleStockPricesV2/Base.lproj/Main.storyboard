@@ -75,21 +75,66 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="114.50892857142857"/>
         </scene>
-        <!--View Controller-->
+        <!--User Info Detail View Controller-->
         <scene sceneID="YPC-JH-1a2">
             <objects>
-                <viewController id="iq9-1l-BEI" sceneMemberID="viewController">
+                <viewController id="iq9-1l-BEI" customClass="UserInfoDetailViewController" customModule="PeopleAndAppleStockPricesV2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZxS-Zd-HNB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="faceid" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ukH-C4-olx">
+                                <rect key="frame" x="106" y="141" width="202" height="237.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="SGb-ID-wtu"/>
+                                    <constraint firstAttribute="width" constant="202" id="pxj-mh-cRn"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4NB-3X-Mrq">
+                                <rect key="frame" x="8" y="400" width="398" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XTP-Nd-zWZ">
+                                <rect key="frame" x="8" y="434.5" width="398" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="33r-vH-DBh">
+                                <rect key="frame" x="8" y="469" width="398" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="XTP-Nd-zWZ" firstAttribute="leading" secondItem="GpO-gq-fm8" secondAttribute="leading" constant="8" id="5qA-L2-UXH"/>
+                            <constraint firstItem="4NB-3X-Mrq" firstAttribute="leading" secondItem="GpO-gq-fm8" secondAttribute="leading" constant="8" id="FST-XR-tRQ"/>
+                            <constraint firstItem="XTP-Nd-zWZ" firstAttribute="top" secondItem="4NB-3X-Mrq" secondAttribute="bottom" constant="8" id="I6M-8N-whn"/>
+                            <constraint firstItem="GpO-gq-fm8" firstAttribute="trailing" secondItem="4NB-3X-Mrq" secondAttribute="trailing" constant="8" id="KhJ-Xt-tKx"/>
+                            <constraint firstItem="33r-vH-DBh" firstAttribute="leading" secondItem="GpO-gq-fm8" secondAttribute="leading" constant="8" id="NeK-eW-S9Z"/>
+                            <constraint firstItem="33r-vH-DBh" firstAttribute="top" secondItem="XTP-Nd-zWZ" secondAttribute="bottom" constant="8" id="OJa-yj-7Ch"/>
+                            <constraint firstItem="ukH-C4-olx" firstAttribute="top" secondItem="GpO-gq-fm8" secondAttribute="top" id="TiH-Ix-hLP"/>
+                            <constraint firstItem="GpO-gq-fm8" firstAttribute="trailing" secondItem="XTP-Nd-zWZ" secondAttribute="trailing" constant="8" id="YOX-tW-Sss"/>
+                            <constraint firstItem="4NB-3X-Mrq" firstAttribute="top" secondItem="ukH-C4-olx" secondAttribute="bottom" constant="20" id="eet-Dg-Uhi"/>
+                            <constraint firstItem="GpO-gq-fm8" firstAttribute="trailing" secondItem="33r-vH-DBh" secondAttribute="trailing" constant="8" id="eny-XV-Gv6"/>
+                            <constraint firstItem="ukH-C4-olx" firstAttribute="centerX" secondItem="ZxS-Zd-HNB" secondAttribute="centerX" id="knZ-KD-Zvm"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="GpO-gq-fm8"/>
                     </view>
                     <navigationItem key="navigationItem" id="un7-5d-ZXl"/>
+                    <connections>
+                        <outlet property="emailLabel" destination="XTP-Nd-zWZ" id="ad1-cK-be8"/>
+                        <outlet property="nameLabel" destination="4NB-3X-Mrq" id="sEw-T9-ecO"/>
+                        <outlet property="phoneNumLabel" destination="33r-vH-DBh" id="fWc-X8-rFG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6IB-ma-x94" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1897" y="115"/>
+            <point key="canvasLocation" x="1895.6521739130437" y="114.50892857142857"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IuL-Qr-0Jd">
@@ -110,4 +155,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="114.50892857142857"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="faceid" catalog="system" width="64" height="56"/>
+    </resources>
 </document>
