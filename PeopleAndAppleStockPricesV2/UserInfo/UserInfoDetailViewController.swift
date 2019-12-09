@@ -26,5 +26,6 @@ class UserInfoDetailViewController: UIViewController {
             fatalError("Couldn't pull User, check prepare for segue")
         }
         nameLabel.text = detailVCUser.name.first.capitalized + " " + detailVCUser.name.last.capitalized
+        emailLabel.text = detailVCUser.e
     }
 }
