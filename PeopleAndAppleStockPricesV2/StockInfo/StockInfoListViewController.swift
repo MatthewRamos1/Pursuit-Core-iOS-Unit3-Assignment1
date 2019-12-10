@@ -12,11 +12,15 @@ class StockInfoListViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var stockInfo = [Stock]()
+    var stockInfo = [[Stock]]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let data = Bundle.readJSONData(filename: "appleStockInfo", ext: "json")
+        let stocks = Stock.getStocks(data: data)
+        stockInfo = Stock.getSections(stocks)
         tableView.dataSource = self
+        
 
         
         
@@ -25,9 +29,24 @@ class StockInfoListViewController: UIViewController {
 
 extension StockInfoListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
+        stockInfo[section].count
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "stockCell", for: indexPath)
+        let stock = stockInfo[indexPath.section][indexPath.row]
+        cell.detailTextLabel?.text = String(stock.open)
+        return cell
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        stockInfo.count
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        guard let month = stockInfo[section].first?.month, let year = stockInfo[section].first?.year else {
+            return "Error"
+        }
+        return month + " - 20" + year
     }
 }
