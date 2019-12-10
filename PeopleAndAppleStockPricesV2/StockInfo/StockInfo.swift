@@ -18,8 +18,8 @@ struct Stock: Decodable {
         return dateComponents.first ?? "Error"
     }
     var year: String {
-        let dateComponents = label.components(separatedBy: " ")
-        return dateComponents.last ?? "Error"
+        let dateComponents = date.components(separatedBy: "-")
+        return dateComponents.first ?? "Error"
     }
 
     static func getStocks (data: Data) -> [Stock] {
@@ -52,7 +52,6 @@ struct Stock: Decodable {
                 sections[currentIndex].append(stock)
             } else {
                 currentIndex += 1
-                print(currentIndex)
                 currentMonth = stock.month
                 sections[currentIndex].append(stock)
             }

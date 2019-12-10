@@ -20,10 +20,13 @@ class StockInfoListViewController: UIViewController {
         let stocks = Stock.getStocks(data: data)
         stockInfo = Stock.getSections(stocks)
         tableView.dataSource = self
-        
-
-        
-        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let stockInfoDetailVC = segue.destination as? StockInfoDetailViewController, let indexPath = tableView.indexPathForSelectedRow else {
+            fatalError("Error with preparing segue")
+        }
+        stockInfoDetailVC.stock = stockInfo[indexPath.section][indexPath.row]
     }
 }
 
@@ -35,6 +38,7 @@ extension StockInfoListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "stockCell", for: indexPath)
         let stock = stockInfo[indexPath.section][indexPath.row]
+        cell.textLabel?.text = stock.date
         cell.detailTextLabel?.text = String(stock.open)
         return cell
     }
@@ -47,6 +51,6 @@ extension StockInfoListViewController: UITableViewDataSource {
         guard let month = stockInfo[section].first?.month, let year = stockInfo[section].first?.year else {
             return "Error"
         }
-        return month + " - 20" + year
+        return "\(month) - \(year)"
     }
 }
