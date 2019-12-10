@@ -32,9 +32,9 @@ struct Stock: Decodable {
         return newDate
     }
 
-    static func getSections(_ input: [Stock]) -> [[Stock]] {
-        var sections = [[Stock]]()
-        var sortedStocks = input.sorted { Stock.stringToDate($0.label) < Stock.stringToDate($1.label)}
-    
-    }
+//    static func getSections(_ input: [Stock]) -> [[Stock]] {
+//        var sections = [[Stock]]()
+//        var sortedStocks = input.sorted { Stock.stringToDate($0.label) < Stock.stringToDate($1.label)}
+//
+//    }
 }
