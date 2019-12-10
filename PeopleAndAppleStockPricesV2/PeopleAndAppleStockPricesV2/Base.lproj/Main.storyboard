@@ -188,7 +188,7 @@
                     <connections>
                         <outlet property="backgroundView" destination="DUq-fF-SyF" id="ILT-vl-tZn"/>
                         <outlet property="closeStockPriceLabel" destination="K4r-VK-xyT" id="rAk-bx-1cf"/>
-                        <outlet property="dateLabel" destination="RKG-0R-c40" id="wMx-zI-fsb"/>
+                        <outlet property="dateLabel" destination="RKG-0R-c40" id="9pn-5E-uzK"/>
                         <outlet property="imageView" destination="o6j-Xr-4Xq" id="OiQ-Ht-wve"/>
                         <outlet property="openStockPriceLabel" destination="yzF-vF-kGe" id="4rW-9w-KsS"/>
                     </connections>
